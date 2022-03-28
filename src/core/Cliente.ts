@@ -11,7 +11,6 @@ export default class Cliente {
     #Vencimento: string
     #Valor_neg: number
     #Vendedor: string
-    #Registro: string
 
     constructor(
         Nome: string,
@@ -25,7 +24,6 @@ export default class Cliente {
         Vencimento: string,
         Valor_neg: number,
         Vendedor: string,
-        Registro: string,
         id: string = null) {
 
         this.#Nome = Nome
@@ -39,7 +37,6 @@ export default class Cliente {
         this.#Vencimento = Vencimento
         this.#Valor_neg = Valor_neg
         this.#Vendedor = Vendedor
-        this.#Registro = Registro
         this.#id = id
     }
 
@@ -93,10 +90,6 @@ export default class Cliente {
 
     get Vendedor() {
         return this.#Vendedor
-    }
-
-    get Registro() {
-        return this.#Registro
     }
 
 }

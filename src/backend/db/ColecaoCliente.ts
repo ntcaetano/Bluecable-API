@@ -17,7 +17,6 @@ export default class ColecaoCliente implements ClienteRepositorio {
                 Vencimento: cliente.Vencimento,
                 Valor_neg: cliente.Valor_neg,
                 Vendedor: cliente.Vendedor,
-                Registro : cliente.Registro,
             }
         },
         fromFirestore(snapshot: firebase.firestore.QueryDocumentSnapshot, options: firebase.firestore.SnapshotOptions): Cliente {
@@ -33,7 +32,6 @@ export default class ColecaoCliente implements ClienteRepositorio {
                 dados.Vencimento,
                 dados.Valor_neg,
                 dados.Vendedor,
-                dados.Registro,
                 snapshot.id)
         }
     }
