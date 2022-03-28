@@ -1,11 +1,42 @@
 export default class Cliente {
     #id: string
     #nome: string
-    #idade: number
+    #Cpf_Cnpj: string
+    #Whatsapp: string
+    #Contrato: string
+    #Cep: string
+    #Endereço: string
+    #Cidade: string
+    #Vencimento: string
+    #Valor_neg: number
+    #Vendedor: string
+    #Registro: string
 
-    constructor(nome: string, idade: number, id: string = null) {
+    constructor(
+        nome: string,
+        Cpf_Cnpj: string, 
+        Whatsapp: string, 
+        Contrato: string, 
+        Cep: string, 
+        Cidade: string, 
+        Endereço: string, 
+        Vencimento: string, 
+        Valor_neg: number, 
+        Vendedor: string, 
+        Registro: string, 
+        id: string = null) {
+
         this.#nome = nome
-        this.#idade = idade
+        this.#Cpf_Cnpj = Cpf_Cnpj
+        this.#Whatsapp = Whatsapp
+        this.#Contrato = Contrato
+        this.#Cep = Cep
+        this.#Cidade = Cidade
+        this.#Endereço = Endereço
+        this.#Vencimento = Vencimento
+        this.#Valor_neg = Valor_neg
+        this.#Vendedor = Vendedor
+        this.#Registro = Registro
         this.#id = id
     }
 
@@ -21,7 +52,44 @@ export default class Cliente {
         return this.#nome
     }
 
-    get idade() {
-        return this.#idade
+    get Cpf_Cnpj() {
+        return this.#Cpf_Cnpj
     }
+    
+    get Whatsapp() {
+        return this.#Whatsapp
+    }
+
+    get Contrato() {
+        return this.#Contrato
+    }
+
+    get Cep() {
+        return this.#Cep
+    }
+
+    get Cidade() {
+        return this.#Cidade
+    }
+
+    get Endereço() {
+        return this.#Endereço
+    }
+
+    get Valor_neg() {
+        return this.#Valor_neg
+    }
+
+    get Vencimento() {
+        return this.#Vencimento
+    }
+
+    get Vendedor() {
+        return this.#Vendedor
+    }
+
+    get Registro() {
+        return this.#Registro
+    }
+
 }
