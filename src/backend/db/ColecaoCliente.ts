@@ -7,7 +7,7 @@ export default class ColecaoCliente implements ClienteRepositorio {
     #conversor = {
         toFirestore(cliente: Cliente) {
             return {
-                nome: cliente.nome,
+                Nome: cliente.Nome,
                 Cpf_Cnpj: cliente.Cpf_Cnpj,
                 Whatsapp: cliente.Whatsapp,
                 Contrato: cliente.Contrato,
@@ -23,7 +23,7 @@ export default class ColecaoCliente implements ClienteRepositorio {
         fromFirestore(snapshot: firebase.firestore.QueryDocumentSnapshot, options: firebase.firestore.SnapshotOptions): Cliente {
             const dados = snapshot.data(options)
             return new Cliente(
-                dados.nome,
+                dados.Nome,
                 dados.Cpf_Cnpj, 
                 dados.Whatsapp, 
                 dados.Contrato, 

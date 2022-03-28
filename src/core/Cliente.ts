@@ -1,7 +1,8 @@
 export default class Cliente {
     #id: string
-    #nome: string
+    #Nome: string
     #Cpf_Cnpj: string
+    #Data_nasc: string
     #Whatsapp: string
     #Contrato: string
     #Cep: string
@@ -13,21 +14,23 @@ export default class Cliente {
     #Registro: string
 
     constructor(
-        nome: string,
-        Cpf_Cnpj: string, 
-        Whatsapp: string, 
-        Contrato: string, 
-        Cep: string, 
-        Cidade: string, 
-        Endereço: string, 
-        Vencimento: string, 
-        Valor_neg: number, 
-        Vendedor: string, 
-        Registro: string, 
+        Nome: string,
+        Cpf_Cnpj: string,
+        Data_nasc: string,
+        Whatsapp: string,
+        Contrato: string,
+        Cep: string,
+        Cidade: string,
+        Endereço: string,
+        Vencimento: string,
+        Valor_neg: number,
+        Vendedor: string,
+        Registro: string,
         id: string = null) {
 
-        this.#nome = nome
+        this.#Nome = Nome
         this.#Cpf_Cnpj = Cpf_Cnpj
+        this.#Data_nasc = Data_nasc
         this.#Whatsapp = Whatsapp
         this.#Contrato = Contrato
         this.#Cep = Cep
@@ -48,14 +51,18 @@ export default class Cliente {
         return this.#id
     }
 
-    get nome() {
-        return this.#nome
+    get Nome() {
+        return this.#Nome
     }
 
     get Cpf_Cnpj() {
         return this.#Cpf_Cnpj
     }
-    
+
+    get Data_nasc() {
+        return this.#Data_nasc
+    }
+
     get Whatsapp() {
         return this.#Whatsapp
     }
