@@ -29,11 +29,11 @@ async function usuarioNormalizado(usuarioFirebase: firebase.User): Promise<Usuar
 
 function gerenciarCookie(logado: boolean) {
     if (logado) {
-        Cookies.set('admin-template-cod3r-auth', logado, {
+        Cookies.set('bluecable-auth', logado, {
             expires: 7
         })
     } else {
-        Cookies.remove('admin-template-cod3r-auth')
+        Cookies.remove('bluecable-auth')
     }
 }
 
@@ -107,7 +107,7 @@ export function AuthProvider(props) {
     }
 
     useEffect(() => {
-        if(Cookies.get('admin-template-cod3r-auth')){
+        if(Cookies.get('bluecable-auth')){
             const cancelar = firebase.auth().onIdTokenChanged(configurarSessao)
             return () => cancelar()
         } else {

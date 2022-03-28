@@ -1,12 +1,12 @@
 import MenuLateral from "./MenuLateral"
 import Cabecalho from "./Cabecalho"
-import Conteudo from "./Conteudo"
+import Titulo from "./Titulo"
 import { useTema } from "../../hooks/useTema"
 import ForçarAutenticacao from "../auth/ForcarAutenticacao"
+import Conteudo from "./Conteudo"
 
 interface LayoutProps {
-    titulo: string
-    subtitulo: string
+    titulo?: string
     children?: any
 }
 
@@ -19,8 +19,9 @@ export default function Layout(props: LayoutProps) {
             <div className={`
             flex flex-col w-full p-7 
             bg-gray-300 dark:bg-gray-800
+            text-gray-800 dark:text-gray-300 
         `}>
-                <Cabecalho titulo={props.titulo} subtitulo={props.subtitulo} />
+                <Cabecalho titulo={props.titulo}/>
                 <Conteudo>
                     {props.children}
                 </Conteudo>

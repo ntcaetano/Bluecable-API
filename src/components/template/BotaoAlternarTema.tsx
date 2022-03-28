@@ -23,7 +23,7 @@ export default function BotaoAlternarTema(props: BotaoAlternarTemaProps) {
                 hidden lg:flex items-center ml-2
                 text-white
             `}>
-                <span className="text-sm">Claro</span>
+                <span className="text-sm"></span>
             </div>
             <div>
 
@@ -39,7 +39,7 @@ export default function BotaoAlternarTema(props: BotaoAlternarTemaProps) {
             hidden lg:flex items-center mr-1
             text-gray-300
             `}>
-            <span className="text-sm">Escuro</span>
+            <span className="text-sm"></span>
             </div>
             <div className={`
                     flex items-center justify-center

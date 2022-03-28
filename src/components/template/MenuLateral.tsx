@@ -1,5 +1,5 @@
 import { useAuth } from '../../hooks/useAuth'
-import { IconeAjustes, IconeCasa, IconeSair, IconeSino } from '../Icons'
+import { IconeAjustes, IconeCasa, IconeSair} from '../Icons'
 import Logo from './Logo'
 import MenuItem from './MenuItem'
 
@@ -15,7 +15,7 @@ export default function MenuLateral() {
         `}>
             <div className={`
                 flex flex-col items-center justify-center
-                bg-gradient-to-r from-indigo-500 via-blue-600 to-purple-800
+                bg-gradient-to-r from-blue-900 to-blue-400
                 h-20 w-20
             `}>
                 <Logo />
@@ -23,7 +23,6 @@ export default function MenuLateral() {
             <ul className="flex-grow">
                 <MenuItem url="/" texto="Início" icone={IconeCasa}/>
                 <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes}/>
-                <MenuItem url="/notificacoes" texto="Notificações" icone={IconeSino}/>
             </ul>
             <ul>
                 <MenuItem texto="Sair" icone={IconeSair}

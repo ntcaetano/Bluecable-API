@@ -1,25 +1,26 @@
 import MenuLateral from './MenuLateral'
 
 interface TituloProps {
+    children?: any
     titulo: string
-    subtitulo: string
 }
 
+
 export default function Titulo(props: TituloProps) {
+
     return (
-        <div>
-            <h1 className={`
+        <div className="flex flex-col justify-center">
+            <h1 className="px-5 py-2 text-2xl">
+                {props.children}
+            </h1>
+            <div>
+                <h1 className={`
                 font-black text-3xl
                 text-gray-900 dark:text-gray-100
             `}>
-                {props.titulo}
-            </h1>
-            <h2 className={`
-                font-light text-sm
-                dark:text-gray-200
-            `}>
-                {props.subtitulo}
-            </h2>
+                    {props.titulo}
+                </h1>
+            </div>
         </div>
     )
 }
