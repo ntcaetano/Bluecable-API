@@ -3,13 +3,13 @@ import Cliente from "../../core/Cliente";
 import Botao from "./Botao";
 import Entrada from "./Entrada";
 
-interface FormularioProps {
+interface AlteraProps {
     cliente: Cliente
     clienteMudou?: (cliente: Cliente) => void
     cancelado?: () => void
 }
 
-export default function Formulario(props: FormularioProps) {
+export default function Altera(props: AlteraProps) {
     const id = props.cliente?.id
     const [nome, setNome] = useState(props.cliente?.nome ?? '')
     const [idade, setIdade] = useState(props.cliente?.idade ?? 0)
@@ -42,9 +42,6 @@ export default function Formulario(props: FormularioProps) {
                 <Botao className="mr-2"
                     onClick={() => props.clienteMudou?.(new Cliente(nome, idade, id))}>
                     {id ? 'Alterar' : 'Registrar'}
-                </Botao>
-                <Botao onClick={props.cancelado}>
-                    Cancelar
                 </Botao>
             </div>
         </div>

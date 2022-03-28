@@ -1,4 +1,4 @@
-import Formulario from "../components/template/Formulario";
+import Formulario from "../components/template/Alterar";
 import Layout from "../components/template/Layout";
 import useClientes from "../hooks/useClientes";
 
