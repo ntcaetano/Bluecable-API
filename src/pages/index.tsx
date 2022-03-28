@@ -10,20 +10,25 @@ export default function Home() {
   } = useClientes()
 
   return (
+
     <div className={`
-      flex justify-center items-center h-screen
-      bg-gradient-to-r from-blue-700 to-blue-400
-      text-white
-    `}>
+        flex justify-center items-center h-screen
+        bg-gradient-to-r from-blue-700 to-blue-400
+        text-white
+      `}>
       <Layout titulo="Renegociação">
         <div className="w-full marker:flex justify-end">
-          <Formulario
-            cliente={cliente}
-            clienteMudou={salvarCliente}
-          />
+          <div className="flex-wrap">
+            <Formulario
+              cliente={cliente}
+              clienteMudou={salvarCliente}
+            />
+          </div>
         </div>
       </Layout>
     </div>
+
+
   )
 }
 

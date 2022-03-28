@@ -9,14 +9,16 @@ export default class ColecaoCliente implements ClienteRepositorio {
             return {
                 Nome: cliente.Nome,
                 Cpf_Cnpj: cliente.Cpf_Cnpj,
+                Data_nasc: cliente.Data_nasc,
                 Whatsapp: cliente.Whatsapp,
                 Contrato: cliente.Contrato,
                 Cep: cliente.Cep,
-                Endereço: cliente.Endereço,
+                Endereco: cliente.Endereco,
                 Cidade: cliente.Cidade,
                 Vencimento: cliente.Vencimento,
                 Valor_neg: cliente.Valor_neg,
                 Vendedor: cliente.Vendedor,
+                Mensagem: cliente.Mensagem,
             }
         },
         fromFirestore(snapshot: firebase.firestore.QueryDocumentSnapshot, options: firebase.firestore.SnapshotOptions): Cliente {
@@ -24,16 +26,18 @@ export default class ColecaoCliente implements ClienteRepositorio {
             return new Cliente(
                 dados.Nome,
                 dados.Cpf_Cnpj, 
+                dados.Data_nasc, 
                 dados.Whatsapp, 
                 dados.Contrato, 
                 dados.Cep, 
-                dados.Endereço,
+                dados.Endereco,
                 dados.Cidade,
                 dados.Vencimento,
                 dados.Valor_neg,
                 dados.Vendedor,
-                snapshot.id)
-        }
+                dados.Mensagem,
+                snapshot.id
+            )}
     }
     
     async salvar(cliente: Cliente): Promise<Cliente> {

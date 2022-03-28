@@ -16,7 +16,7 @@ export default function Tabela(props: TabelaProps) {
             <tr>
                 <th className="text-left p-4">Código</th>
                 <th className="text-left p-4">Nome</th>
-                <th className="text-left p-4">Idade</th>
+                <th className="text-left p-4">Cpf/Cnpj</th>
                 {exibirAcoes ? <th className="p-4">Ações</th> : false}
             </tr>
         )
@@ -28,8 +28,8 @@ export default function Tabela(props: TabelaProps) {
                 <tr key={cliente.id}
                     className={`${i % 2 === 0 ? 'bg-blue-300' : 'bg-blue-100'}`}>
                     <td className="text-left p-4">{cliente.id}</td>
-                    <td className="text-left p-4">{cliente.nome}</td>
-                    <td className="text-left p-4">{cliente.idade}</td>
+                    <td className="text-left p-4">{cliente.Nome}</td>
+                    <td className="text-left p-4">{cliente.Cpf_Cnpj}</td>
                     {exibirAcoes ? rederizarAcoes(cliente) : false}
                 </tr>
             )
@@ -62,7 +62,7 @@ export default function Tabela(props: TabelaProps) {
     }
 
     return (
-        <table className="w-full rounded-xl overflow-hidden">
+        <table className="w-full rounded-xl">
             <thead className={`
                 text-gray-100
                 bg-gradient-to-r from-blue-900 to-blue-600

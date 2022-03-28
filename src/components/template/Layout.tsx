@@ -11,22 +11,24 @@ interface LayoutProps {
 }
 
 export default function Layout(props: LayoutProps) {
-    const {tema} = useTema()
+    const { tema } = useTema()
     return (
         <ForçarAutenticacao>
-        <div className={`${tema} flex h-screen w-screen`}>
-            <MenuLateral />
-            <div className={`
+            <div className={`${tema} flex h-screen w-screen`}>
+                <MenuLateral />
+                <div className={`
             flex flex-col w-full p-7 
             bg-gray-300 dark:bg-gray-800
             text-gray-800 dark:text-gray-300 
         `}>
-                <Cabecalho titulo={props.titulo}/>
-                <Conteudo>
-                    {props.children}
-                </Conteudo>
+                    <Cabecalho titulo={props.titulo} />
+                    <div className= "overflow-y-auto">
+                        <Conteudo>
+                            {props.children}
+                        </Conteudo>
+                    </div>
+                </div>
             </div>
-        </div>
         </ForçarAutenticacao>
     )
 }

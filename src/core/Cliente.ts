@@ -6,11 +6,12 @@ export default class Cliente {
     #Whatsapp: string
     #Contrato: string
     #Cep: string
-    #Endereço: string
+    #Endereco: string
     #Cidade: string
     #Vencimento: string
     #Valor_neg: number
     #Vendedor: string
+    #Mensagem: string
 
     constructor(
         Nome: string,
@@ -20,10 +21,11 @@ export default class Cliente {
         Contrato: string,
         Cep: string,
         Cidade: string,
-        Endereço: string,
+        Endereco: string,
         Vencimento: string,
         Valor_neg: number,
         Vendedor: string,
+        Mensagem: string,
         id: string = null) {
 
         this.#Nome = Nome
@@ -33,15 +35,16 @@ export default class Cliente {
         this.#Contrato = Contrato
         this.#Cep = Cep
         this.#Cidade = Cidade
-        this.#Endereço = Endereço
+        this.#Endereco = Endereco
         this.#Vencimento = Vencimento
         this.#Valor_neg = Valor_neg
         this.#Vendedor = Vendedor
+        this.#Mensagem = Mensagem
         this.#id = id
     }
 
     static vazio() {
-        return new Cliente('', 0)
+        return new Cliente('', '', '', '', '', '', '', '', '', 0, '', '')
     }
 
     get id() {
@@ -76,8 +79,8 @@ export default class Cliente {
         return this.#Cidade
     }
 
-    get Endereço() {
-        return this.#Endereço
+    get Endereco() {
+        return this.#Endereco
     }
 
     get Valor_neg() {
@@ -90,6 +93,10 @@ export default class Cliente {
 
     get Vendedor() {
         return this.#Vendedor
+    }
+    
+    get Mensagem() {
+        return this.#Mensagem
     }
 
 }
