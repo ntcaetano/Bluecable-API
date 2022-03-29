@@ -38,6 +38,7 @@ export default function Altera(props: AlteraProps) {
         <div>
             {id ? (
                 <Nome
+                    tipo="number"
                     somenteLeitura
                     texto="Código"
                     valor={id}
@@ -45,6 +46,7 @@ export default function Altera(props: AlteraProps) {
                 />
             ) : false}
             <Nome
+                tipo="text"
                 texto="Nome Completo"
                 valor={nome}
                 valorMudou={setNome}
@@ -121,7 +123,7 @@ export default function Altera(props: AlteraProps) {
 
 
 
-            <div className="flex justify-end mt-7">
+            <div className="flex justify-end mt-7 cursor-pointer">
                 <Botao className="mr-2"
                     onClick={() => props.clienteMudou?.(
                         new Cliente(

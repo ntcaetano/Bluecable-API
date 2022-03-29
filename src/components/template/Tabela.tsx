@@ -64,12 +64,12 @@ export default function Tabela(props: TabelaProps) {
     return (
         <table className="w-full rounded-xl">
             <thead className={`
-                text-gray-100
+                text-gray-200
                 bg-gradient-to-r from-blue-900 to-blue-600
             `}>
                 {renderizarCabecalho()}
             </thead>
-            <tbody>
+            <tbody className="dark:text-black">
                 {renderizarDados()}
             </tbody>
         </table>

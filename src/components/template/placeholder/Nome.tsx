@@ -1,24 +1,20 @@
-import React, { InputHTMLAttributes} from "react"
-
-interface NomeProps extends InputHTMLAttributes<HTMLInputElement>{
+interface NomeProps {
+    tipo: 'text' | 'number'
     texto: string
     valor: any
     somenteLeitura?: boolean
-    classNome?: string
+    className?: string
     valorMudou?: (valor: any) => void
 }
 
 export default function Nome(props: NomeProps) {
     return (
-        <div className={`flex flex-col ${props.className} validate-input`}
-        
-        data-validate="Campo Obrigatório"
-        >
+        <div className={`flex flex-col ${props.className}`}>
             <label className="mb-2">
                 {props.texto}
             </label>
             <input
-                type='text'  
+                type={props.tipo ?? 'text'}
                 value={props.valor}
                 readOnly={props.somenteLeitura}
                 onChange={e => props.valorMudou?.(e.target.value)}

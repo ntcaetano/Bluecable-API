@@ -38,6 +38,7 @@ export default function Altera(props: AlteraProps) {
         <div>
             {id ? (
                 <Nome
+                    tipo="number"
                     somenteLeitura
                     texto="Código"
                     valor={id}
@@ -45,11 +46,13 @@ export default function Altera(props: AlteraProps) {
                 />
             ) : false}
             <Nome
+                tipo="text"
                 texto="Nome Completo"
                 valor={nome}
                 valorMudou={setNome}
-                className="mb-5"
-            />
+                className="mb-5" 
+                
+             />
             <CpfCnpj
                 texto="Cpf/Cnpj"
                 valor={cpfCnpj}
