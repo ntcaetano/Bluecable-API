@@ -10,7 +10,10 @@ interface NomeProps extends InputHTMLAttributes<HTMLInputElement>{
 
 export default function Nome(props: NomeProps) {
     return (
-        <div className={`flex flex-col ${props.className}`}>
+        <div className={`flex flex-col ${props.className} validate-input`}
+        
+        data-validate="Campo Obrigatório"
+        >
             <label className="mb-2">
                 {props.texto}
             </label>
