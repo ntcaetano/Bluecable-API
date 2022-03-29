@@ -1,45 +1,45 @@
 export default class Cliente {
     #id: string
-    #Nome: string
-    #Cpf_Cnpj: string
-    #Data_nasc: string
-    #Whatsapp: string
-    #Contrato: string
-    #Cep: string
-    #Endereco: string
-    #Cidade: string
-    #Vencimento: string
-    #Valor_neg: number
-    #Vendedor: string
-    #Mensagem: string
+    #nome: string
+    #cpfCnpj: string
+    #dataNasc: string
+    #whatsApp: string
+    #contrato: string
+    #cep: string
+    #endereco: string
+    #cidade: string
+    #vencimento: string
+    #valorNeg: number
+    #vendedor: string
+    #mensagem: string
 
     constructor(
-        Nome: string,
-        Cpf_Cnpj: string,
-        Data_nasc: string,
-        Whatsapp: string,
-        Contrato: string,
-        Cep: string,
-        Cidade: string,
-        Endereco: string,
-        Vencimento: string,
-        Valor_neg: number,
-        Vendedor: string,
-        Mensagem: string,
+        nome: string,
+        cpfCnpj: string,
+        dataNasc: string,
+        whatsApp: string,
+        contrato: string,
+        cep: string,
+        cidade: string,
+        endereco: string,
+        vencimento: string,
+        valorNeg: number,
+        vendedor: string,
+        mensagem: string,
         id: string = null) {
 
-        this.#Nome = Nome
-        this.#Cpf_Cnpj = Cpf_Cnpj
-        this.#Data_nasc = Data_nasc
-        this.#Whatsapp = Whatsapp
-        this.#Contrato = Contrato
-        this.#Cep = Cep
-        this.#Cidade = Cidade
-        this.#Endereco = Endereco
-        this.#Vencimento = Vencimento
-        this.#Valor_neg = Valor_neg
-        this.#Vendedor = Vendedor
-        this.#Mensagem = Mensagem
+        this.#nome = nome
+        this.#cpfCnpj = cpfCnpj
+        this.#dataNasc = dataNasc
+        this.#whatsApp = whatsApp
+        this.#contrato = contrato
+        this.#cep = cep
+        this.#cidade = cidade
+        this.#endereco = endereco
+        this.#vencimento = vencimento
+        this.#valorNeg = valorNeg
+        this.#vendedor = vendedor
+        this.#mensagem = mensagem
         this.#id = id
     }
 
@@ -51,52 +51,52 @@ export default class Cliente {
         return this.#id
     }
 
-    get Nome() {
-        return this.#Nome
+    get nome() {
+        return this.#nome
     }
 
-    get Cpf_Cnpj() {
-        return this.#Cpf_Cnpj
+    get cpfCnpj() {
+        return this.#cpfCnpj
     }
 
-    get Data_nasc() {
-        return this.#Data_nasc
+    get dataNasc() {
+        return this.#dataNasc
     }
 
-    get Whatsapp() {
-        return this.#Whatsapp
+    get whatsApp() {
+        return this.#whatsApp
     }
 
-    get Contrato() {
-        return this.#Contrato
+    get contrato() {
+        return this.#contrato
     }
 
-    get Cep() {
-        return this.#Cep
+    get cep() {
+        return this.#cep
     }
 
-    get Cidade() {
-        return this.#Cidade
+    get cidade() {
+        return this.#cidade
     }
 
-    get Endereco() {
-        return this.#Endereco
+    get endereco() {
+        return this.#endereco
     }
 
-    get Valor_neg() {
-        return this.#Valor_neg
+    get valorNeg() {
+        return this.#valorNeg
     }
 
-    get Vencimento() {
-        return this.#Vencimento
+    get vencimento() {
+        return this.#vencimento
     }
 
-    get Vendedor() {
-        return this.#Vendedor
+    get vendedor() {
+        return this.#vendedor
     }
     
-    get Mensagem() {
-        return this.#Mensagem
+    get mensagem() {
+        return this.#mensagem
     }
 
 }

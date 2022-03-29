@@ -19,7 +19,7 @@ export default function Layout(props: LayoutProps) {
                 <div className={`
             flex flex-col w-full p-7 
             bg-gray-300 dark:bg-gray-800
-            text-gray-800 dark:text-gray-300 
+            text-gray-800 dark:text-gray-300
         `}>
                     <Cabecalho titulo={props.titulo} />
                     <div className= "overflow-y-auto">

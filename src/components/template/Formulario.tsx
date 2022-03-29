@@ -1,7 +1,18 @@
 import { useState } from "react";
 import Cliente from "../../core/Cliente";
 import Botao from "./Botao";
-import Entrada from "./Entrada";
+import Cep from "./placeholder/Cep";
+import Contrato from "./placeholder/Contrato";
+import CpfCnpj from "./placeholder/CpfCnpj";
+import Nascimento from "./placeholder/Nascimento";
+import Nome from "./placeholder/Nome";
+import Whatsapp from "./placeholder/Whatsapp";
+import Endereco from "./placeholder/Endereco";
+import Cidade from "./placeholder/Cidade";
+import Vencimento from "./placeholder/Vencimento";
+import Negociacao from "./placeholder/Negociacao";
+import Vendedor from "./placeholder/Vendedor";
+import Mensagem from "./placeholder/Mensagem";
 
 interface AlteraProps {
     cliente: Cliente
@@ -11,132 +22,124 @@ interface AlteraProps {
 
 export default function Altera(props: AlteraProps) {
     const id = props.cliente?.id
-    const [Nome, setNome] = useState(props.cliente?.Nome ?? '')
-    const [Cpf_Cnpj, setCpf_Cnpj] = useState(props.cliente?.Cpf_Cnpj ?? '')
-    const [Data_nasc, setData_nasc] = useState(props.cliente?.Data_nasc ?? '')
-    const [Whatsapp, setWhatsapp] = useState(props.cliente?.Whatsapp ?? '')
-    const [Contrato, setContrato] = useState(props.cliente?.Contrato ?? '')
-    const [Cep, setCep] = useState(props.cliente?.Cep ?? '')
-    const [Endereco, setEndereco] = useState(props.cliente?.Endereco ?? '')
-    const [Cidade, setCidade] = useState(props.cliente?.Cidade ?? '')
-    const [Vencimento, setVencimento] = useState(props.cliente?.Vencimento ?? '')
-    const [Valor_neg, setValor_neg] = useState(props.cliente?.Valor_neg ?? 0)
-    const [Vendedor, setVendedor] = useState(props.cliente?.Vendedor ?? '')
-    const [Mensagem, setMensagem] = useState(props.cliente?.Mensagem ?? '')
+    const [nome, setNome] = useState(props.cliente?.nome ?? '')
+    const [cpfCnpj, setCpfCnpj] = useState(props.cliente?.cpfCnpj ?? '')
+    const [dataNasc, setDataNasc] = useState(props.cliente?.dataNasc ?? '')
+    const [whatsApp, setWhatsApp] = useState(props.cliente?.whatsApp ?? '')
+    const [contrato, setContrato] = useState(props.cliente?.contrato ?? '')
+    const [cep, setCep] = useState(props.cliente?.cep ?? '')
+    const [endereco, setEndereco] = useState(props.cliente?.endereco ?? '')
+    const [cidade, setCidade] = useState(props.cliente?.cidade ?? '')
+    const [vencimento, setVencimento] = useState(props.cliente?.vencimento ?? '')
+    const [valorNeg, setValorNasc] = useState(props.cliente?.valorNeg ?? 0)
+    const [vendedor, setVendedor] = useState(props.cliente?.vendedor ?? '')
+    const [mensagem, setMensagem] = useState(props.cliente?.mensagem ?? '')
     return (
         <div>
             {id ? (
-                <Entrada
+                <Nome
                     somenteLeitura
                     texto="Código"
                     valor={id}
                     className="mb-5"
                 />
             ) : false}
-            <Entrada
-                texto="Nome"
-                valor={Nome}
+            <Nome
+                texto="Nome Completo"
+                valor={nome}
                 valorMudou={setNome}
                 className="mb-5"
             />
-            <Entrada
+            <CpfCnpj
                 texto="Cpf/Cnpj"
-                tipo="text"
-                valor={Cpf_Cnpj}
-                valorMudou={setCpf_Cnpj}
+                valor={cpfCnpj}
+                valorMudou={setCpfCnpj}
                 className="mb-5"
             />
-            <Entrada
+            <Nascimento
                 texto="Data de nascimento"
-                tipo="text"
-                valor={Data_nasc}
-                valorMudou={setData_nasc}
+                valor={dataNasc}
+                valorMudou={setDataNasc}
+                className="mb-5"
+                tipo={"date"}
+                />
+            <Whatsapp
+                texto="WhatsApp"
+                valor={whatsApp}
+                valorMudou={setWhatsApp}
                 className="mb-5"
             />
-            <Entrada
-                texto="Whatsapp"
-                tipo="text"
-                valor={Whatsapp}
-                valorMudou={setWhatsapp}
-                className="mb-5"
-            />
-            <Entrada
+            <Contrato
                 texto="Contrato"
-                tipo="text"
-                valor={Contrato}
+                valor={contrato}
                 valorMudou={setContrato}
                 className="mb-5"
             />
-            <Entrada
+            <Cep
                 texto="Cep"
-                tipo="text"
-                valor={Cep}
+                valor={cep}
                 valorMudou={setCep}
                 className="mb-5"
             />
-            <Entrada
+            <Endereco
                 texto="Endereço"
-                tipo="text"
-                valor={Endereco}
+                valor={endereco}
                 valorMudou={setEndereco}
                 className="mb-5"
             />
-            <Entrada
+            <Cidade
                 texto="Cidade"
-                tipo="text"
-                valor={Cidade}
+                valor={cidade}
                 valorMudou={setCidade}
                 className="mb-5"
             />
-            <Entrada
+            <Vencimento
                 texto="Vencimento"
-                tipo="text"
-                valor={Vencimento}
+                valor={vencimento}
                 valorMudou={setVencimento}
                 className="mb-5"
+                tipo={"date"}
             />
-            <Entrada
+            <Negociacao
                 texto="Valor da Negociação"
-                tipo="number"
-                valor={Valor_neg}
-                valorMudou={setValor_neg}
+                valor={valorNeg}
+                valorMudou={setValorNasc}
                 className="mb-5"
             />
-            <Entrada
+            <Vendedor
                 texto="Vendedor"
-                tipo="text"
-                valor={Vendedor}
+                valor={vendedor}
                 valorMudou={setVendedor}
                 className="mb-5"
             />
-            <Entrada
-                texto="Mensagem"
-                tipo="text"
-                valor={Mensagem}
+            <Mensagem
+                texto="Observação"
+                valor={mensagem}
                 valorMudou={setMensagem}
                 className="mb-5"
             />
+
 
 
             <div className="flex justify-end mt-7">
                 <Botao className="mr-2"
                     onClick={() => props.clienteMudou?.(
                         new Cliente(
-                            Nome,
-                            Cpf_Cnpj,
-                            Data_nasc,
-                            Whatsapp,
-                            Contrato,
-                            Cep,
-                            Endereco,
-                            Cidade,
-                            Vencimento,
-                            Valor_neg,
-                            Vendedor,
-                            Mensagem,
+                            nome,
+                            cpfCnpj,
+                            dataNasc,
+                            whatsApp,
+                            contrato,
+                            cep,
+                            endereco,
+                            cidade,
+                            vencimento,
+                            valorNeg,
+                            vendedor,
+                            mensagem,
                             id
                         ))}>
-                    {id ? 'Alterar' : 'Registrar'}
+                    {id ? 'Alterar' : 'Enviar'}
                 </Botao>
                 <Botao onClick={props.cancelado}>
                     Cancelar
