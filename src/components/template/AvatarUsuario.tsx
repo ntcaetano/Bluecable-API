@@ -12,6 +12,7 @@ export default function AvatarUsuario(props: AvatarUsuarioProps) {
                 alt="Avatar do Usuário"
                 className={`
                     h-10 w-10 rounded-full
+                    border-2 border-gray-400
                     ${props.className}
                 `}
             />    
