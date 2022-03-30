@@ -1,18 +1,18 @@
 import { useState } from "react";
 import Cliente from "../../core/Cliente";
 import Botao from "./Botao";
-import Cep from "./placeholder/Cep";
-import Contrato from "./placeholder/Contrato";
-import CpfCnpj from "./placeholder/CpfCnpj";
-import Nascimento from "./placeholder/Nascimento";
-import Nome from "./placeholder/Nome";
-import Whatsapp from "./placeholder/Whatsapp";
-import Endereco from "./placeholder/Endereco";
-import Cidade from "./placeholder/Cidade";
-import Vencimento from "./placeholder/Vencimento";
-import Negociacao from "./placeholder/Negociacao";
-import Vendedor from "./placeholder/Vendedor";
-import Mensagem from "./placeholder/Mensagem";
+import Cep from "./labels/Cep";
+import Contrato from "./labels/Contrato";
+import CpfCnpj from "./labels/CpfCnpj";
+import Nascimento from "./labels/Nascimento";
+import Nome from "./labels/Nome";
+import Whatsapp from "./labels/Whatsapp";
+import Endereco from "./labels/Endereco";
+import Cidade from "./labels/Cidade";
+import Vencimento from "./labels/Vencimento";
+import Negociacao from "./labels/Negociacao";
+import Vendedor from "./labels/Vendedor";
+import Mensagem from "./labels/Mensagem";
 
 interface AlteraProps {
     cliente: Cliente
