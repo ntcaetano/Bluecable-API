@@ -11,7 +11,6 @@ interface CidadeProps extends InputHTMLAttributes<HTMLInputElement> {
 export default function Cidade(props: CidadeProps) {
     return (
         <div className={`flex flex-col ${props.className}`}
-        data-validate="Campo Obrigatório"
         >
             <label className="mb-2">
                 {props.texto}
