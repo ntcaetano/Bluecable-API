@@ -3,7 +3,6 @@ import { createContext, useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
 import firebase from '../firebase/config'
 import Usuario from '../model/Usuario'
-import Firebase from './Firebase';
 
 interface AuthContextProps {
     usuario?: Usuario
