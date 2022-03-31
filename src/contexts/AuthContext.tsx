@@ -69,6 +69,7 @@ export function AuthProvider(props) {
         }
     }
 
+
     async function cadastrar(email, senha) {
         try {
             setCarregando(true)
@@ -81,6 +82,19 @@ export function AuthProvider(props) {
             setCarregando(false)
         }
     }
+
+      // async function login(email, senha) {
+    //     try {
+    //         setCarregando(true)
+    //         const resp = await firebase.auth()
+    //             .signInWithEmailAndPassword(email, senha)
+
+    //         await configurarSessao(resp.user)
+    //         route.push('/')
+    //     } finally {
+    //         setCarregando(false)
+    //     }
+    // }
 
     async function loginGoogle() {
         try {
@@ -100,7 +114,7 @@ export function AuthProvider(props) {
             setCarregando(true)
             await firebase.auth().signOut()
             await configurarSessao(null)
-        } finally {
+        } finally { 
             setCarregando(false)
         }
 
