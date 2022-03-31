@@ -15,6 +15,7 @@ export default function Mensagem(props: MensagemProps) {
                 {props.texto}
             </label>
             <textarea 
+                placeholder="Digite sua mensagem aqui..."
                 value={props.valor}
                 readOnly={props.somenteLeitura}
                 onChange={e => props.valorMudou?.(e.target.value)}

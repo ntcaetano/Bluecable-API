@@ -15,7 +15,9 @@ export default function Name(props: NegociacaoProps) {
                 {props.texto}
             </label>
             <input
-                type='text'  
+                placeholder="000.00"
+                maxLength={5}
+                type='text'
                 value={props.valor}
                 readOnly={props.somenteLeitura}
                 onChange={e => props.valorMudou?.(e.target.value)}

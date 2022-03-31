@@ -13,6 +13,9 @@ export default function Whatsapp(props: WhatsappProps) {
                 {props.texto}
             </label>
             <input
+                placeholder="(51)98888-7777"
+                maxLength={13}
+                minLength={13}
                 type='text'
                 value={props.valor}
                 readOnly={props.somenteLeitura}

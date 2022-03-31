@@ -15,6 +15,8 @@ export default function NEndereco(props: EnderecoProps) {
                 {props.texto}
             </label>
             <input
+                placeholder="Digite seu endereço"
+                maxLength={52}
                 type='text'  
                 value={props.valor}
                 readOnly={props.somenteLeitura}

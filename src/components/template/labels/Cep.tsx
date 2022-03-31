@@ -15,7 +15,9 @@ export default function Cep(props: CepProps) {
                 {props.texto}
             </label>
             <input
-                type='text'  
+                placeholder="Digite o seu cep"
+                maxLength={10}
+                type='number'  
                 value={props.valor}
                 readOnly={props.somenteLeitura}
                 onChange={e => props.valorMudou?.(e.target.value)}

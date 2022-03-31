@@ -13,7 +13,9 @@ export default function Contrato(props: ContratoProps) {
                 {props.texto}
             </label>
             <input
-                type='text'
+                type='number'
+                placeholder="Digite o número do contrato"
+                maxLength={10}
                 value={props.valor}
                 readOnly={props.somenteLeitura}
                 onChange={e => props.valorMudou?.(e.target.value)}
@@ -24,7 +26,7 @@ export default function Contrato(props: ContratoProps) {
                     dark:bg-gray-700
                     ${props.somenteLeitura ? '' : 'focus:bg-white'}
                 `}
-             />
+            />
         </div>
     )
 }

@@ -25,7 +25,7 @@ export default function Nascimento(props: NascimentoProps) {
                     dark:bg-gray-700
                     ${props.somenteLeitura ? '' : 'focus:bg-white'}
                 `}
-             />
+            />
         </div>
     )
 }
