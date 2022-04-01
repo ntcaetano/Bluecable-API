@@ -83,19 +83,6 @@ export function AuthProvider(props) {
         }
     }
 
-      // async function login(email, senha) {
-    //     try {
-    //         setCarregando(true)
-    //         const resp = await firebase.auth()
-    //             .signInWithEmailAndPassword(email, senha)
-
-    //         await configurarSessao(resp.user)
-    //         route.push('/')
-    //     } finally {
-    //         setCarregando(false)
-    //     }
-    // }
-
     async function loginGoogle() {
         try {
             setCarregando(true)
