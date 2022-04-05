@@ -16,7 +16,7 @@ export default function ForcarAutenticacao(props) {
                     <script
                         dangerouslySetInnerHTML={{
                             __html: `
-                                if(!document.cookie?.includes("admin-template-cod3r-auth")) {
+                                if(!document.cookie?.includes("bluecable-auth")) {
                                     window.location.href = "/autenticacao"
                                 }
                             `
