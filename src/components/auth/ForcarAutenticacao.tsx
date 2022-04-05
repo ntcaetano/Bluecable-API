@@ -13,7 +13,7 @@ export default function ForcarAutenticacao(props) {
         return (
             <>
                 <Head>
-                    {/* <script
+                    <script
                         dangerouslySetInnerHTML={{
                             __html: `
                                 if(!document.cookie?.includes("bluecable-auth")) {
@@ -21,7 +21,7 @@ export default function ForcarAutenticacao(props) {
                                 }
                             `
                         }}
-                    /> */}
+                    />
                 </Head>
                 {props.children}
             </>
