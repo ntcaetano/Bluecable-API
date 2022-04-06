@@ -59,6 +59,7 @@ export function AuthProvider(props) {
     }
 
     async function login(email, senha) {
+        const cookie = "bluecable-auth; sameSite=none; secure";
         try {
             setCarregando(true)
             const resp = await firebase.auth()
