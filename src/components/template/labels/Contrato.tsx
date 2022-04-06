@@ -7,6 +7,7 @@ interface ContratoProps {
 }
 
 export default function Contrato(props: ContratoProps) {
+
     return (
         <div className={`flex flex-col ${props.className}`}>
             <label className="mb-2">
@@ -15,7 +16,6 @@ export default function Contrato(props: ContratoProps) {
             <input
                 type='number'
                 placeholder="Digite o número do contrato"
-                maxLength={10}
                 value={props.valor}
                 readOnly={props.somenteLeitura}
                 onChange={e => props.valorMudou?.(e.target.value)}
