@@ -29,11 +29,10 @@ async function usuarioNormalizado(usuarioFirebase: firebase.User): Promise<Usuar
 
 function gerenciarCookie(logado: boolean) {
     if (logado) {
-        Cookies.set('bluecable-auth', logado, {
-            expires: 7,
-            secure: true,
-            sameSite: 'secure'
-        })
+        Cookies.set('bluecable-auth', "true", {
+    expires: 7,
+    secure: true,
+})
     } else {
         Cookies.remove('bluecable-auth')
     }
