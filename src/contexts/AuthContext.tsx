@@ -30,9 +30,10 @@ async function usuarioNormalizado(usuarioFirebase: firebase.User): Promise<Usuar
 function gerenciarCookie(logado: boolean) {
     if (logado) {
         Cookies.set('bluecable-auth', logado, {
-        expires: 7,
-        secure: true
-})
+            expires: 7,
+            secure: true,
+            sameSite: 'secure'
+        })
     } else {
         Cookies.remove('bluecable-auth')
     }
@@ -98,18 +99,18 @@ export function AuthProvider(props) {
     }
 
     async function logout() {
-        try{
+        try {
             setCarregando(true)
             await firebase.auth().signOut()
             await configurarSessao(null)
-        } finally { 
+        } finally {
             setCarregando(false)
         }
 
     }
 
     useEffect(() => {
-        if(Cookies.get('bluecable-auth')){
+        if (Cookies.get('bluecable-auth')) {
             const cancelar = firebase.auth().onIdTokenChanged(configurarSessao)
             return () => cancelar()
         } else {
