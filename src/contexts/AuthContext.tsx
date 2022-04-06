@@ -43,7 +43,7 @@ export function AuthProvider(props) {
     const [usuario, setUsuario] = useState<Usuario>(null)
 
     async function configurarSessao(usuarioFirebase) {
-        if (usuarioFirebase?.email) {
+        if (usuarioFirebase?.email) { 
             const usuario = await usuarioNormalizado(usuarioFirebase)
             setUsuario(usuario)
             gerenciarCookie(true)
@@ -58,7 +58,7 @@ export function AuthProvider(props) {
     }
 
     async function login(email, senha) {
-        const cookie = "bluecable-auth; sameSite=none; secure";
+        // const cookie = "bluecable-auth; sameSite=none; secure";
         try {
             setCarregando(true)
             const resp = await firebase.auth()
