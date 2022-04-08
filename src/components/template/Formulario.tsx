@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cliente from "../../core/Cliente";
 import Botao from "./Botao";
 import Cep from "./labels/Cep";
@@ -34,6 +34,7 @@ export default function Altera(props: AlteraProps) {
     const [valorNeg, setValorNasc] = useState(props.cliente?.valorNeg ?? 0)
     const [vendedor, setVendedor] = useState(props.cliente?.vendedor ?? '')
     const [mensagem, setMensagem] = useState(props.cliente?.mensagem ?? '')
+
     return (
         <div>
             {id ? (
@@ -140,7 +141,8 @@ export default function Altera(props: AlteraProps) {
                             vendedor,
                             mensagem,
                             id
-                        ))}>
+                        ))}
+                        >
                     {id ? 'Alterar' : 'Enviar'}
                 </Botao>
                 <Botao onClick={props.cancelado}>

@@ -6,7 +6,7 @@ export default function Home() {
 
   const {
     cliente,
-    salvarCliente,
+    novoCliente,
   } = useClientes()
 
   return (
@@ -21,7 +21,7 @@ export default function Home() {
           <div className="flex-wrap">
             <Formulario
               cliente={cliente}
-              clienteMudou={salvarCliente}
+              clienteMudou={novoCliente}
             />
           </div>
         </div>

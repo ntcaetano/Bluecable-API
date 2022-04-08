@@ -31,6 +31,13 @@ export default function useClientes() {
         obterTodos()
     }
 
+    async function novoCliente() {
+        await repo.salvar(cliente)
+        setCliente(Cliente.vazio())
+        obterTodos()
+        exibirFormulario()
+    }
+
     async function salvarCliente(cliente: Cliente) {
         await repo.salvar(cliente)
         obterTodos()
@@ -39,6 +46,7 @@ export default function useClientes() {
     return {
         cliente,
         clientes,
+        novoCliente,
         salvarCliente,
         excluirCliente,
         selecionarCliente,

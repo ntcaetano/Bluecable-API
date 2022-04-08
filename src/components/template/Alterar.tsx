@@ -13,6 +13,7 @@ import Vencimento from "./labels/Vencimento";
 import Negociacao from "./labels/Negociacao";
 import Vendedor from "./labels/Vendedor";
 import Mensagem from "./labels/Mensagem";
+import MenuItem from "./MenuItem";
 
 interface AlteraProps {
     cliente: Cliente
@@ -144,7 +145,13 @@ export default function Altera(props: AlteraProps) {
                         ))}>
                     {id ? 'Alterar' : 'Registrar'}
                 </Botao>
+                <Botao>
+                    Limpar
+                </Botao>
             </div>
         </div>
     )
 }
+
+
+
