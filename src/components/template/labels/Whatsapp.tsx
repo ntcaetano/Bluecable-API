@@ -1,3 +1,5 @@
+import { useCallback } from "react"
+
 interface WhatsappProps {
     texto: string
     valor: any
@@ -7,6 +9,18 @@ interface WhatsappProps {
 }
 
 export default function Whatsapp(props: WhatsappProps) {
+
+    const handleKeyUp = useCallback((e: React.FormEvent<HTMLInputElement>) => {
+        e.currentTarget.maxLength = 14
+        let value = e.currentTarget.value;
+        value = value.replace(/\D/g, "");
+        value = value.replace(/(.{0})(\d)/, "$1($2")
+        value = value.replace(/(.{3})(\d)/, "$1)$2")
+        value = value.replace(/(\d{5})(\d{4})/, "$1-$2")
+        e.currentTarget.value = value;
+        return e;
+    }, [])
+
     return (
         <div className={`flex flex-col ${props.className}`}>
             <label className="mb-2">
@@ -14,12 +28,12 @@ export default function Whatsapp(props: WhatsappProps) {
             </label>
             <input
                 placeholder="(51)98888-7777"
-                maxLength={13}
-                minLength={13}
+                maxLength={14}
                 type='text'
                 value={props.valor}
                 readOnly={props.somenteLeitura}
                 onChange={e => props.valorMudou?.(e.target.value)}
+                onKeyUp={handleKeyUp}
                 className={`
                     w-full
                     border border-blue-500 rounded-lg
@@ -27,7 +41,7 @@ export default function Whatsapp(props: WhatsappProps) {
                     dark:bg-gray-700
                     ${props.somenteLeitura ? '' : 'focus:bg-white dark:focus:bg-gray-600'}
                 `}
-             />
+            />
         </div>
     )
 }

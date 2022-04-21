@@ -1,6 +1,5 @@
 import MenuLateral from "./MenuLateral"
 import Cabecalho from "./Cabecalho"
-import Titulo from "./Titulo"
 import { useTema } from "../../hooks/useTema"
 import ForçarAutenticacao from "../auth/ForcarAutenticacao"
 import Conteudo from "./Conteudo"

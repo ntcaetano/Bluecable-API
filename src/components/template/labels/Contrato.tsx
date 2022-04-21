@@ -1,3 +1,5 @@
+import { useCallback } from "react"
+
 interface ContratoProps {
     texto: string
     valor: any
@@ -8,17 +10,27 @@ interface ContratoProps {
 
 export default function Contrato(props: ContratoProps) {
 
+    const handleKeyUp = useCallback((e: React.FormEvent<HTMLInputElement>) => {
+        e.currentTarget.maxLength = 9
+        let value = e.currentTarget.value;
+        value = value.replace(/\D/g, "");
+        e.currentTarget.value = value;
+        return e;
+    }, [])
+
     return (
         <div className={`flex flex-col ${props.className}`}>
             <label className="mb-2">
                 {props.texto}
             </label>
             <input
-                type='number'
+                type='text'
                 placeholder="Digite o número do contrato"
                 value={props.valor}
+                maxLength={9}
                 readOnly={props.somenteLeitura}
                 onChange={e => props.valorMudou?.(e.target.value)}
+                onKeyUp={handleKeyUp}
                 className={`
                     w-full
                     border border-blue-500 rounded-lg

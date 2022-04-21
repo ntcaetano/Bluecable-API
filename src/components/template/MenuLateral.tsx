@@ -1,5 +1,5 @@
 import { useAuth } from '../../hooks/useAuth'
-import { IconeAjustes, IconeCasa, IconeConsulta, IconeFormulario, IconeSair} from '../Icons'
+import { IconeConsulta, IconeFormulario, IconeSair} from '../Icons'
 import Logo from './Logo'
 import MenuItem from './MenuItem'
 

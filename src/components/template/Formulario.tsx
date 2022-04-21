@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Cliente from "../../core/Cliente";
 import Botao from "./Botao";
 import Cep from "./labels/Cep";
@@ -43,7 +43,7 @@ export default function Altera(props: AlteraProps) {
                     somenteLeitura
                     texto="Código"
                     valor={id}
-                    className="mb-5"
+                    className="mb-5 hidden"
                 />
             ) : false}
             <Nome

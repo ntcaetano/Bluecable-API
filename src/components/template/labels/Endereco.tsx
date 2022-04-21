@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes} from "react"
+import React, { InputHTMLAttributes } from "react"
 
 interface EnderecoProps extends InputHTMLAttributes<HTMLInputElement>{
     texto: string
@@ -8,7 +8,7 @@ interface EnderecoProps extends InputHTMLAttributes<HTMLInputElement>{
     valorMudou?: (valor: any) => void
 }
 
-export default function NEndereco(props: EnderecoProps) {
+export default function Endereco(props: EnderecoProps) {
     return (
         <div className={`flex flex-col ${props.className}`}>
             <label className="mb-2">
