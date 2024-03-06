@@ -1,3 +1,13 @@
+Bluecable API is a 'Business Webservic' with OAuth system for login and logout integrated with Google. It has a data form where the user can record information about customer renegotiations. The service's functions range from manipulating and storing data via a non-relational database. The application is integrated with the Firebase platform for data management, login authorizations with link validation via Google Cloud. It is also versioned by Github and implemented by the Vercel platform.
+
+Step 1:
+
+In the last blue option "Create an account for free" you can create an account using just a random standard format (it doesn't have to be an existing account) example: "mike123@gmail.com", or you can register a real account using google in the red option "Sign in with google", your password must contain at least 6 digits.
+
+<img src="https://flic.kr/p/2pBUJ7F" alt="Login">
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
