@@ -4,7 +4,7 @@ Step 1:
 
 In the last blue option "Create an account for free" you can create an account using just a random standard format (it doesn't have to be an existing account) example: "mike123@gmail.com", or you can register a real account using google in the red option "Sign in with google", your password must contain at least 6 digits.
 
-<img src="https://flic.kr/p/2pBUJ7F" alt="Login">
+![Login](https://flic.kr/p/2pBUJ7F" alt="Login)
 
 
 
