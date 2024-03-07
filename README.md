@@ -10,7 +10,7 @@ Step 2:
 
 Logging in with your login and password will take you to the home page with the data registration fields. This data is sent to an online data store called "firebase" and can be queried and manipulated via the "Query" tab.
 
-![JV0sC1p.png](https://iili.io/JV0sC1p.png)
+[![JV0sC1p.png](https://iili.io/JV0sC1p.png)](https://freeimage.host/i/JVwJYmP)
 
 Step 3:
 
