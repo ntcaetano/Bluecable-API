@@ -4,7 +4,7 @@ Step 1:
 
 In the last blue option "Create an account for free" you can create an account using just a random standard format (it doesn't have to be an existing account) example: "mike123@gmail.com", or you can register a real account using google in the red option "Entrar com o Google", your password must contain at least 6 digits.
 
-[![JV0iTWx.png](https://iili.io/JV0iTWx.png)](https://freeimage.host/br)
+[[![JV0iTWx.png](https://iili.io/JV0iTWx.png)](https://freeimage.host/br)](https://freeimage.host/i/JVwJYmP)
 
 Step 2: 
 
