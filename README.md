@@ -1,4 +1,4 @@
-Bluecable API is a 'Business Webservice' with OAuth system for login and logout integrated with Google. It has a data form where the user can record information about customer renegotiations. The service's functions range from manipulating and storing data via a non-relational database. The application is integrated with the Firebase platform for data management, login authorizations with link validation via Google Cloud. It is also versioned by Github and implemented by the Vercel platform.
+Bluecable API is a 'Business Webservice' with OAuth system for login and logout integrated with Google. It has a data form where the user can record information about customer renegotiations. The service's functions range from manipulating and storing data via a non-relational database. The application is integrated with the Firebase platform for data managementa and login authorizations with link validation via Google Cloud. It is also versioned by Github and implemented by the Vercel platform.
 
 Step 1:
 
