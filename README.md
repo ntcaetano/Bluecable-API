@@ -16,7 +16,7 @@ Step 3:
 
 In the "Consultation" tab you can see all the renegotiations registered with the bank and you can manipulate the information with the green button or delete the record with the red button.
 
-[![JVwHaiG.png](https://iili.io/JVwHaiG.png)
+![JVwHaiG.png](https://iili.io/JVwHaiG.png)
 
 --------------------------------------------------------------------------------------
 
