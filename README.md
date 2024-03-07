@@ -6,7 +6,19 @@ In the last blue option "Create an account for free" you can create an account u
 
 [![JV0iTWx.png](https://iili.io/JV0iTWx.png)](https://freeimage.host/br)
 
+Step 2: 
 
+Logging in with your login and password will take you to the home page with the data registration fields. This data is sent to an online data store called "firebase" and can be queried and manipulated via the "Query" tab.
+
+![JV0sC1p.png](https://iili.io/JV0sC1p.png)
+
+Step 3:
+
+In the "Consultation" tab you can see all the renegotiations registered with the bank and you can manipulate the information with the green button or delete the record with the red button.
+
+![JVjkGLb.png](https://iili.io/JVjkGLb.png)
+
+--------------------------------------------------------------------------------------
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
